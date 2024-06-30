@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Please Enter Your Username and Password</h2>
+    <p>Username : </p>
+    <input id="Username">
+    <p>Password : </p>
+    <input id="Password">
+    <br><br>
+    <button onclick="myfunction()">Sign in</button>
+    <p id="demo"></p>
+    <script>
+        function myfunction() {
+            let check;
+            let uname = document.getElementById("Username").value;
+            // mire id be name username ra check mikonad meghadresh ro mirize to moteghayere uname
+            let pwd = document.getElementById("Password").value;
+            // mesle commente bala
+            // if e payeen kari mikonad ke agr ba horoofe bozorg ham benevisim error nadahad
+            if (uname.toLowerCase == "alireza".toLowerCase && pwd == "123321") {
+                check = "Welcome";
+            }
+            else {
+                
+                check = " Username or Password is incorrect ";
+                document.getElementById("Password").value = "";
+                document.getElementById("Username").value = "";
+                // in do khat dae soorate eshtebah vared kardane maghadir dakhele kadr ra pak mikonad
+            }
+
+            document.getElementById("demo").innerHTML = check;
+        }
+
+    </script>
+</body>
+
+</html>
+<!-- barname ra joori taghir bde k be tedade character ham masalan 8 ta be payyen gir bede -->
